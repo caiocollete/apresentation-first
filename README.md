@@ -1,3 +1,10 @@
-# 💻 My firts project for web
+<h align="center"> 💻 My firts project for web </h>
 
-- The project has made with HTML, CSS and JS.
+## 🚀 Tecnologias
+
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+- HTML e CSS
+- JavaScript
+- Git e Github
+- Figma
