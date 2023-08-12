@@ -18,6 +18,7 @@
   --icon-button: url(./stars.svg);
   --bg-color-mode: rgba(63, 63, 63, 0.048);
   --position-button: 0;
+  --animation-button-switch: slide-out 0.4s;
 }
 
 .lightMode {
@@ -32,7 +33,8 @@
   --border-color: 1px solid rgba(0, 0, 0, 0.5);
   --icon-button: url(./sun.svg);
   --bg-color-mode: rgba(226, 255, 255, 0.226);
-  --position-button: 100;
+  --position-button: 50%;
+  --animation-button-switch: slide-in 0.4s;
 }
 
 body {
@@ -88,6 +90,7 @@ body * {
   top: 50%;
   position: absolute;
   right: var(--position-button);
+  animation: var(--animation-button-switch);
   z-index: 1;
   transform: translateY(-50%);
 }
@@ -147,4 +150,22 @@ footer {
   padding: 24px;
   text-align: center;
   font-size: 14px;
+}
+
+@keyframes slide-in {
+  from {
+    right: 0%;
+  }
+  to {
+    right: 50%;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    right: 50%;
+  }
+  to {
+    right: 0%;
+  }
 }
