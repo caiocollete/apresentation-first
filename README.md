@@ -1,4 +1,4 @@
-<h align="center"> 💻 My firts project for web </h>
+<h1 align="center"> 💻 My firts project for web </h1>
 
 ## 🚀 Tecnologias
 
