@@ -1,0 +1,150 @@
+* {
+  /* seletor universal*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: white;
+  --bg-color: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(18, 18, 18, 1) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  --border-color: 1px solid rgba(255, 255, 255, 0.1);
+  --border-variation: rgba(255, 255, 255, 0.1);
+  --icon-button: url(./stars.svg);
+  --bg-color-mode: rgba(63, 63, 63, 0.048);
+  --position-button: 0;
+}
+
+.lightMode {
+  --text-color: black;
+  --bg-color: linear-gradient(
+    90deg,
+    rgba(206, 248, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(206, 248, 255, 1) 100%
+  );
+  --bg-variation: rgb(216, 246, 255);
+  --border-color: 1px solid rgba(0, 0, 0, 0.5);
+  --icon-button: url(./sun.svg);
+  --bg-color-mode: rgba(226, 255, 255, 0.226);
+  --position-button: 100;
+}
+
+body {
+  background: rgb(0, 0, 0);
+  background: var(--bg-color);
+}
+
+body * {
+  /* seletor universal para body*/
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+#container {
+  width: 360px;
+  margin: 56px auto 32px;
+  padding: 0px 24px;
+}
+/*PROFILE*/
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  /* me refiro a img dentro do #profile*/
+  width: 112px;
+  border-radius: 60px;
+  border: var(--border-color);
+}
+
+#profile p {
+  /*me refiro ao <p> dentro do #profile */
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+/*SWITCH*/
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--icon-button) no-repeat center;
+  border: var(--border-color);
+  border-radius: 50%;
+
+  top: 50%;
+  position: absolute;
+  right: var(--position-button);
+  z-index: 1;
+  transform: translateY(-50%);
+}
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  border-radius: 9999px;
+  border: var(--border-color);
+  background: var(--bg-color-mode);
+  --webkit-backdrop-filter: blur(4px);
+}
+
+ul {
+  list-style: none;
+}
+ul li a {
+  padding: 16px 24px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+
+  background: var(--bg-variation);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: var(--border-color);
+  border-radius: 40px;
+
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: background 0.3s;
+}
+
+ul li a:hover {
+  /* pseudo-selector**/
+  background: rgba(255, 255, 255, 0.05);
+  border: var(--border-color);
+}
+
+#social-icons {
+  display: flex;
+  padding: 24px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+  align-self: stretch;
+  font-size: 24px;
+  transition: font-size 0.3s;
+}
+
+#social-icons a:hover {
+  font-size: 30px;
+}
+
+footer {
+  padding: 24px;
+  text-align: center;
+  font-size: 14px;
+}
