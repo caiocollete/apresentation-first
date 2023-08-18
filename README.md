@@ -9,3 +9,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - JavaScript
 - Git e Github
 - Figma
+
+
+Layout by: Rocketseat
